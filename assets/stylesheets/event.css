@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@font-face {
+    font-family: Poppins;
+    src: url('../fonts/Poppins/Poppins-Regular.ttf');
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+section,
+header,
+footer,
+nav,
+div,
+span,
+ul,
+li,
+a {
+    box-sizing: border-box;
+}
+
+
+/************************************************
+****************************************
+********************************
+            My Styles Started
+*******************************
+****************************************
+************************************************/
+
+hr{
+    border: 1px solid #00DAD9;
+}
+table{
+    font-family: 'Roboto', sans-serif;
+}
+table td{
+    padding: 4px;
+}
+
+
+/* events page styles */
+
+.about {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 2.3vmin;
+}
+#section-about h3{
+    color: #00BDDE;
+    text-transform: capitalize;
+    text-align: center;
+    font-family: Poppins;
+}
+
+.card-title{
+    color: #F06126;
+    text-transform: capitalize;
+    text-align: center;
+    font-family: Poppins;
+}
+@media (min-width:280px)  {
+    .card-title{
+        font-size: 14px;
+    }
+}
+@media (min-width:312px)  {
+    .card-title{
+        font-size: 15px;
+    }
+    .event-card{
+        height: 80px !important;
+        min-height: 80px !important;
+    }
+}
+@media (min-width:824px)  {
+    .card-title{
+        font-size: 19px;
+        font-weight: normal;
+    }
+    .card-content p{
+        font-size: 17px;
+    }
+    .event-card{
+        height: 100px !important;
+        min-height: 100px !important;
+    }
+}
+.event-card{
+    padding: 2px;
+
+    background: #ffffff;
+    border-radius: 2px;
+}
+.card-content{
+    padding: 4px;
+    font-family: 'Roboto', sans-serif;
+}
+.events {
+    margin-top: 1%;
+}
+
+/* events styles total completed */
+
+
+
+
+
+/* event details page styles */
+.color{
+    background: #ffffff;
+}
+.radius{
+    border-radius: 3px;
+}
+
+p,li{
+    font-size: 1.85vmin;
+}
+.row{
+   margin-top: 2vmin;
+   font-family: 'Roboto', sans-serif;
+}
+h4 {
+    text-transform: uppercase;
+    font-family: Poppins;
+    color: #0697E1 !important;
+}
+.re a{
+    text-transform: capitalize;
+}
+
+
+@media (min-width:312px)  {
+    #event_total {
+        height: 420px !important;
+        min-height: 250px !important;
+    }
+    #co-Ordinator_total{
+        height: 250px !important;
+        min-height: 250px !important;
+    }
+    #relatedevents_total{
+        height: 150px !important;
+        min-height: 150px !important;
+    }
+}
+@media (min-width:824px)  {
+    #event_total {
+        height: 520px !important;
+        min-height: 500px !important;
+    }
+    #co-Ordinator_total{
+        height: 300px !important;
+        min-height: 300px !important;
+    }
+    #relatedevents_total{
+        height: 200px !important;
+        min-height: 200px !important;
+    }
+}
+
+#event_total{
+    background: #ffffff;
+    overflow-y: auto;
+}
+#co-Ordinator_total {
+    background: #ffffff;
+    overflow-y: auto;
+}
+#relatedevents_total {
+    background: #ffffff;
+    padding-bottom: 10px !important;
+    overflow-y: auto;
+}
+/* event details page styles completed */
+
+
+/************************************************
+****************************************
+********************************
+            My styles completed
+*******************************
+****************************************
+************************************************/
+
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 80px;
+}
+
+header nav {
+    background-color: transparent;
+}
+
+header ul {
+    margin: 1em;
+    padding: 0;
+    list-style: none;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+header ul a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #FFFFFF;
+    height: 50px;
+    display: block;
+    position: relative;
+    font-size: 2vmin;
+    font-family: Poppins;
+}
+
+header ul a:hover,a:focus{
+  color: #37BBAB;
+}
+
+header ul a span {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+}
+
+section {
+    float: left;
+    display: block;
+    height: 100%;
+    padding: 75px 0 0 0;
+    margin: 0;
+}
+
+#section-section2 {
+    background: url('../imgs/bg2.png') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    background-color: #1d4457 !important;
+}
+
+#section-about {
+    background: url('../imgs/bg2.png') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    background-color: #1d4457 !important;
+}
+
+#section-events {
+    background: url('../imgs/bg2.png') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    background-color: #1d4457 !important;
+}
+
+#section-coordinator {
+    background: url('../imgs/bg2.png') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    background-color: #1d4457 !important;
+}
+
+
+
+#section-section5 {
+    background: url('../imgs/bg2.png') no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    background-color: #1d4457 !important;
+}
+
+.horizon-prev,
+.horizon-next {
+    position: fixed;
+    top: 50%;
+    margin-top: -24px;
+    z-index: 9999;
+}
+
+.horizon-prev {
+    left: 20px;
+}
+
+.horizon-next {
+    right: 20px;
+}
+
+.overlay {
+    margin-top: 7%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 10%;
+    max-height: 100%;
+    /*    background-color: rgba(255,255,255,0.5);*/
+    background-color: transparent;
+    color: #FFFFFF;
+}

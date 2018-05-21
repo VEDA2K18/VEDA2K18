@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>VEDA 2K18 | The Retrofuture | Aditya</title>
+
+   
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .loader {
+            display: flex;
+            background-color: #000;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99999;
+        }
+
+    </style>
+    <link rel="stylesheet" href="static/main/css/style.css">
+    <link rel="stylesheet" href="static/main/css/events.css">
+    <link rel="stylesheet" href="static/main/css/copy.css">
+    <link rel="stylesheet" href="static/main/css/responsive.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+   
+</head>
+<body>
+ <nav>
+        <div class="mob-nav-wrap">
+
+            <div class="ham">
+                <img src="static\main\img\ham3.svg" class="open">
+                <img src="static\main\img\close2.svg" class="close">
+            </div>
+        </div>
+        <div class="nav-inner">
+            <ul class="main-nav">
+                <li><a href="#schedule">Schedule</a></li>
+                <!-- <li  class="page-trigger" data-page='exhibitions'>Exhibitions</li> -->
+                <li class="page-trigger" data-page='workshops'>Workshops</li>
+                <li class="events-trigger"><a href="#events">Events</a></li>
+                <li class="page-trigger" data-page='think-again'>Think Again</li>
+                <!-- <li class="page-trigger" data-page='literary-fest'>Literary Fest</li> -->
+                <li class="page-trigger" data-page='prof-show'>Prof Show</li>
+                <!-- <li><a href="/schedule">Schedule</a></li> -->
+                <li class="page-trigger" data-page='competitions'>Competition</li>
+                <li class="page-trigger" data-page='sponsors'>Partners</li>
+
+                <li><a href="#login-register">Register/Login</a></li>
+
+               <!-- <li class="search-mob-icon searchform-icon">
+                    <svg id="icon-search" viewbox="0 0 19 19">
+            <path d="M18.86 17.44l-6.69-6.69a6.69 6.69 0 1 0-1.41 1.41l6.69 6.69zm-12-6a4.7 4.7 0 1 1 3.92-2.16l-1.49 1.43a4.63 4.63 0 0 1-2.48.77z"></path>
+          </svg>
+                </li>-->
+            </ul>
+
+            <div class="mob-nav">
+                <!--<div class="search">
+                    <div class="search-mob-icon">
+                        <img src="static\main\img\search.svg">
+                    </div>
+                    <input id="search-mob" placeholder="Search">
+                </div>-->
+                <div class="search-results">
+                    <div class="menu results">
+                        <h2 class="list-type">Menu</h2>
+                        <ul>
+                            <li><a href="./exhibitions">Exhibitions</a></li>
+                            <li><a href="./workshops">Workshops</a></li>
+                            <li class="events-trigger"><a href="#events">Events</a></li>
+                            <li><a href="./think-again">Think Again</a></li>
+                           <!-- <li><a href="index.htm#literary-fest">Literary Fest</a></li>
+                            <li class="foot-links"><a href="http://www.mapmyindia.com/api/appmyindia/" target="_blank">Map My India</a></li>
+                            <li><a href="./prof_show">Prof Show</a></li>
+                            <!-- <li><a href="/schedule">Schedule</a></li> -->
+                            <li><a href="./competition">Competition</a></li>
+                            <li><a href="index.htm#sponsors">Partners</a></li>
+                            <li><a href="index.htm#login-register">Register/Login</a> </li>
+                        </ul>
+                    </div>
+                    <div class="events results">
+                        <h2 class="list-type">Events</h2>
+                        <ul>
+                            <li><a href="./exhibitions">Exhibitions</a></li>
+                            <li><a href="./workshops">Workshops</a></li>
+                            <li><a href="./events">Events</a></li>
+                            <li><a href="./think-again">Think Again</a></li>
+                            <li><a href="index.htm#literary-fest">Literary Fest</a></li>
+                            <!--<li class="foot-links"><a href="http://www.mapmyindia.com/api/appmyindia/" target="_blank">Map My India</a></li> -->
+                            <li><a href="./prof_show">Prof Show</a></li>
+                            <!-- <li><a href="/schedule">Schedule</a></li> -->
+                            <li><a href="./competition">Competition</a></li>
+                            <li><a href="index.htm#sponsors">Sponsors</a></li>
+                            <li><a href="index.htm#login-register">Register/Login</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </nav>
+
+ <script type="text/javascript" src="static\main\js\jquery.min.js"></script>
+        <script type="text/javascript" src="static\main\js\events.js"></script>
+        <script type="text/javascript">
+            function hashOpen() {
+                hash = location.hash.substr(1);
+
+                if (hash) {
+
+                    if (hash.includes('landing')) {
+                        $('.landing').hide();
+                        $('.' + hash + '-wrapper').show();
+                    } else if (hash.includes('events')) {
+                        console.log(2);
+                        $('.content-wrapper-psuedo').css({
+                            top: '50%',
+                            left: '0'
+                        });
+                        $('.events-wrapper').css({
+                            'z-index': '930'
+                        })
+                        setTimeout(function() {
+
+                            $('.content-wrapper-psuedo').css({
+                                'transform': 'translate(-50%,-50%) scale(1)'
+                            })
+                        }, 100)
+                        setTimeout(function() {
+                            $('.content-wrapper-psuedo').fadeOut(600);
+                            $('#events-inner ul li').show();
+                            $('.content-wrapper').fadeIn(1000);
+                            setTimeout(function() {
+                                $('#events-inner ul li').addClass('move-list');
+                            }, 150);
+                        }, 100);
+                        if (categories.length != 0) {
+                            openEventsPage();
+                            console.log(1);
+                        }
+                    } else if (hash.includes('schedule')) {
+                        $('.schedule-wrapper').fadeIn().css({
+                            'display': 'flex'
+                        });
+                        $('nav,footer').hide();
+
+                    } else {
+                        if (hash.includes('dashboard')) {
+                            dashboard();
+                        }
+                        openPage(hash);
+                    }
+
+                }
+            }
+
+            function openPage(page) {
+                console.log(1);
+                location.hash = '#' + page;
+                if (page) {
+                    $.each($('.pages'), function(_, ele) {
+                        var cls = ele.className.split(' ')[1];
+                        if (cls == page) {
+                            $('.pages').hide();
+                            $('.pages.' + page).css({
+                                display: 'flex',
+                            });
+                            setTimeout(function() {
+                                $('.pages.' + page).addClass('pg-open')
+
+                            }, 100);
+                            $('nav,footer').hide();
+                            $('.back-img').fadeIn();
+                        }
+
+                    });
+
+                }
+            }
+
+
+
+
+
+            window.onhashchange = function() {
+                hashOpen();
+            }
+
+        </script>
+        <script type="text/javascript" src="static\main\js\script.js"></script>
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "https://platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, "script", "twitter-wjs"));
+
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+        </script>
+   
+</body>
+</html>
